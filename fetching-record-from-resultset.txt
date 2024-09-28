@@ -1,0 +1,40 @@
+Fetching data from the resultset object
+=======================================
+You can call getter method of ResultSet interface to fetch/extract data from the resultset object
+These methods return data columnwise
+These methods are overaloaded
+
+public Abc getAbc(int columnno)
+or
+public Abc getAbc(String columnname)
+
+Here Abc is datatype of column
+
+You will have to specify row also
+You can call one of the following method of ResultSet interface to sepcify row
+(Actually row inside resultset object are identified using a pointer.Initial value of this pointerface is -1.This pointer is known as resultset cursor)
+
+1)public boolean next()
+2)public boolean previous()
+3)public boolean first()
+4)public boolean last()
+5)public boolean relative(int n)
+6)public boolean absolute(int n)
+etc
+
+10+4*2*(3+2)
+10+8*(3+2)
+10+8*5;
+10+40
+
+
+
+
+
+
+
+
+
+
+
+

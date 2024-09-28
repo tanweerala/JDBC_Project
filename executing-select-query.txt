@@ -1,0 +1,41 @@
+Executing select query
+======================
+Call following method of Statement interface or PreparedStatement interface to execute select query
+
+public ResultSet executeQuery("pass select query here")
+It is a method of Statement interface
+public ResultSet executeQuery()
+It is a method of PreparedStatement interface
+
+ResultSet interface
+====================
+As we can see return type of executeQuery() method is ResultSet
+It is an interface
+executeQuery() method creates an object of this this interface and keeps select query records into this object and returns reference of this object to the program
+Tasks performed by executeQuery() method
+1)Sends select query to the database server
+2)Accepts records 
+3)Creates object of ResultSet interface
+4)Stores records into this object
+5)Returns reference of this object to the caller(Our program will be called of this method)
+
+As our program has resference of resultset object, so our program can fetch data from this object and show data to the user
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

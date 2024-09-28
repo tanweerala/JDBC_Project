@@ -1,0 +1,7 @@
+Steps to connect and execute query
+==================================
+1)Load driver class
+2)Create connection object
+3)Create statement object
+4)Execute sql query
+5)Close connection

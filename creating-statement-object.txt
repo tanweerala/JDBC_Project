@@ -1,0 +1,45 @@
+Creating statement object
+==========================
+This object is required to execute SQL queries(such as createm,drop,insert,delete,select,etc)
+Follwing interfaces are given for this object
+1)Statement interface
+2)PreparedStatement interface
+3)CallableStatement interface
+
+Statement interface
+====================
+Create object of this interface when you want to execute static query.Query such as
+create table
+drop table
+alter table
+select * from tablename
+delete from tablename
+etc
+Call createStatement() method of Connection interface to create object of Statement interface
+Statement st=cn.createStatement();
+After creating object of Statement interface, call one of the following method of Statement interface to execute query
+i)public boolean execute(String query):Call this method to execute DDL query
+ii)public int executeUpdate(String query):Call this method to execute DML query
+iii)public ResultSet executeQuery(String query):Call this method to execute DQL query
+
+PreparedStatement interface
+============================
+Create object of this interface when you want to execute dynamic query.Query such as
+select * from tablename where id=?
+delete from tablename where id=?
+insert
+update
+etc
+Call prepareStatement() method of Connection interface to create object of PreparedStatement interface
+PreparedStatement ps=cn.prepareStatement("query");
+After creating object of Statement interface, call one of the following method of Statement interface to execute query
+i)public int executeUpdate():Call this method to execute DML query
+ii)public ResultSet executeQuery():Call this method to execute DQL query
+
+insert into employee values(?,?,?);
+
+
+
+
+
+

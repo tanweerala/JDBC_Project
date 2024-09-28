@@ -1,0 +1,15 @@
+JDBC API
+=========
+Java program will call JDBC API(Specially methods implemented by database vendors) to connect database server and execute sql queries 
+These methods are declared/defined(abstract methods) by java vendors
+Implementation of these methods has been given by database vendors
+
+Following interfaces contain these methods.These interfaces are in java.sql package
+1)Driver interface
+2)Connection interface
+3)Statement interface
+4)PreparedStatement interface
+5)CallableStatement interface
+6)ResultSet interface
+etc
+Remember prototype is required to call the method and implementation is required to run the method

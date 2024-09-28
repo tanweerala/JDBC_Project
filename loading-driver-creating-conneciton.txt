@@ -1,0 +1,38 @@
+Loading driver class and createting connection object
+=====================================================
+Every database vendors provide this class(name of the class will be different)
+Every driver class is implementation of java.sql.Driver interface
+Every driver class has several methods.One of them is as follows
+
+public Connection connect(String url,Properties p);
+
+This method is declared inside Driver interface
+Implementation of this method is given inside driver classes
+This method is responsible to perform following two tasks
+1)Connection with database server
+2)Creating and returning object of java.sql.Connection interface.This object is called connection object
+
+connect() method of driver(class) must be called(either directly or indireclty) by our program to make connection with database server and create connection object
+
+Remember code to call connect() method has already been written inside java.sql.DriverManager class. getConnection() method of DriverManager class contains this code
+We will have to write code to call getConnection() method
+getConnection() method is as follows
+
+public static Connection getConnection(String url,String username,String password);
+
+Remember DriverManager class must of reference of driver class object. Becuase getConnection() method of DriverManager class is going to call connect() method of driver class
+
+Note:Every driver class on loading creates and object of itself and registers this object(gives this object) to the DriverManager class.
+
+Class.forName("fully-squalified-driver-class-name");
+
+
+Don't forget to add jar file of database vendors code into your project
+
+Class.forName("com.mysql.cj.jdbc.Driver");
+Connection cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc2","root","mysql");
+
+
+
+
+
